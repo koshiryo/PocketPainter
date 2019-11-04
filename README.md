@@ -1,7 +1,7 @@
 # Pocket Painter
 
 A simple tool for painting based on HTML,CSS,JavaScript(canvas).
-Have a try here!
+[Have a try here!](https://jiaozi1122.com/painter/ "Have a try here!")
 
 ## Overview
 For this online tool, you can choose to draw a line, circle, rectangle, or free line. Also, you can clear your painter by clicking `Clear` button.
