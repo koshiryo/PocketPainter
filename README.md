@@ -41,7 +41,6 @@ Please confirm the pics below:
 #### Draw a free line
     //draw a free line
     function draw_pencil(){
-    	//画任意线
     	cxt.beginPath();
     	cxt.lineJoin="round";
     	cxt.moveTo(startX,startY);	
