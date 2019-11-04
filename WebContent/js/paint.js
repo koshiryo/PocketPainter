@@ -152,12 +152,22 @@ function clear(){
 	}
 }
 
+
 //菜单栏的响应式设计
 var x = document.getElementsByName("shape");
 //用shape_click记录当前被选中的按钮，默认为直线，直线的背景设为pink
 var shape_click=0;
 x[0].style.background = "pink";
 for(var j=0;j<x.length;j++){
+	var select_shape = j;
+	//当鼠标离开时，恢复原来的背景色
+	x[j].onmouseout = (function(select_shape){
+		var Select = select_shape;
+		return function(){
+			if(shape_click!=Select)
+				this.style.background = "black";
+		}
+	})(select_shape);
 	//当选中该图形选项时，背景色变为粉色	
 	x[j].onclick = (function(select_shape){
 		var Select = select_shape;
@@ -166,7 +176,7 @@ for(var j=0;j<x.length;j++){
 			shape_click = Select;
 			this.style.background = "pink";
 		}
-	});
+	})(select_shape);
 }
 
 //当图形选项改变时，恢复上一个被选中选项的背景色
